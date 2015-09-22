@@ -1,0 +1,14 @@
+<h1>Hello, Rails!</h1>
+
+
+ <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+ <% end -%>
+
+ <%= form_tag("/codes", method: "get") do  %>
+    <%= text_field_tag :name %>
+    <%= submit_tag "Search" %>
+ <%end%>
+
+<%= link_to 'My Blog', controller: 'articles' %>
+
